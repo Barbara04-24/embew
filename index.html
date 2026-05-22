@@ -1,154 +1,267 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+ <script>(function(s){s.dataset.zone='11041050',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
  <script src="https://quge5.com/88/tag.min.js" data-zone="241194" async data-cfasync="false"></script>
-<script>(function(s){s.dataset.zone='11032856',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+<script>(function(s){s.dataset.zone='11041058',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VIDEY</title>
     <meta name="monetag" content="c9a7d462b38156e04ab3e3336c564b7b">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>kumpulan video</title>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming Video Terbaru</title>
+    <style>
+        /* --- RESET & BASE STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        body {
+            background-color: #0f0f0f; /* Warna gelap ala YouTube */
+            color: #f1f1f1;
+            padding: 20px;
+        }
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+        header {
+            max-width: 1200px;
+            margin: 0 auto 20px auto;
+            padding: 10px 0;
+            border-bottom: 1px solid #2f2f2f;
+        }
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins', sans-serif;
-    }
+        header h1 {
+            font-size: 24px;
+            color: #ff0000; /* Aksen warna merah cerah */
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
 
-    body{
-      overflow:hidden;
-      background:black;
-      color:white;
-    }
+        /* --- LAYOUT UTAMA --- */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr; /* Membagi video utama dan sidebar */
+            gap: 24px;
+        }
 
-    .hero{
-      position:relative;
-      width:100%;
-      height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      overflow:hidden;
-    }
+        /* --- BAGIAN VIDEO UTAMA --- */
+        .video-player-container {
+            display: flex;
+            flex-direction: column;
+        }
 
-    /* VIDEO */
-    .hero video{
-      position:absolute;
-      top:50%;
-      left:50%;
-      min-width:100%;
-      min-height:100%;
-      transform:translate(-50%, -50%);
-      object-fit:cover;
-      filter:brightness(0.5);
-    }
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* Rasio 16:9 agar responsif */
+            background-color: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+        }
 
-    /* OVERLAY */
-    .overlay{
-      position:absolute;
-      width:100%;
-      height:100%;
-      background:linear-gradient(
-        to top,
-        rgba(0,0,0,0.7),
-        rgba(0,0,0,0.2)
-      );
-    }
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
 
-    /* CONTENT */
-    .content{
-      position:relative;
-      z-index:2;
-      text-align:center;
-      animation:fade 2s ease;
-      padding:20px;
-    }
+        .video-info {
+            margin-top: 16px;
+        }
 
-    .content h1{
-      font-size:4rem;
-      font-weight:700;
-      background:linear-gradient(90deg,#fff,#c084fc);
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-      margin-bottom:10px;
-    }
+        .video-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
 
-    .content p{
-      font-size:1.2rem;
-      color:rgba(255,255,255,0.8);
-      margin-bottom:30px;
-    }
+        .video-metadata {
+            font-size: 14px;
+            color: #aaa;
+            margin-bottom: 12px;
+        }
 
-    /* BUTTON */
-    .btn{
-      padding:14px 35px;
-      border-radius:50px;
-      text-decoration:none;
-      color:white;
-      background:rgba(255,255,255,0.1);
-      border:1px solid rgba(255,255,255,0.2);
-      backdrop-filter:blur(10px);
-      transition:0.3s;
-      font-weight:600;
-    }
+        .video-description {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #dedede;
+            background: #212121;
+            padding: 12px;
+            border-radius: 8px;
+        }
 
-    .btn:hover{
-      background:#c084fc;
-      transform:scale(1.05);
-      box-shadow:0 0 20px rgba(192,132,252,0.7);
-    }
+        /* --- BAGIAN SIDEBAR (REKOMENDASI) --- */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
 
-    @keyframes fade{
-      from{
-        opacity:0;
-        transform:translateY(20px);
-      }
-      to{
-        opacity:1;
-        transform:translateY(0);
-      }
-    }
+        .sidebar-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #fff;
+        }
 
-    @media(max-width:768px){
-      .content h1{
-        font-size:2.5rem;
-      }
+        .video-card {
+            display: flex;
+            gap: 12px;
+            cursor: pointer;
+            border-radius: 8px;
+            padding: 4px;
+            transition: background 0.2s ease;
+        }
 
-      .content p{
-        font-size:1rem;
-      }
-    }
+        .video-card:hover {
+            background-color: #272727;
+        }
 
-  </style>
+        .thumbnail-box {
+            width: 120px;
+            height: 68px;
+            background-color: #333;
+            border-radius: 6px;
+            overflow: hidden;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .thumbnail-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card-title {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.3;
+            margin-bottom: 4px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* Batasi teks maksimal 2 baris */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-author {
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        /* --- RESPONSIVE UNTUK HP --- */
+        @media (max-width: 768px) {
+            .main-container {
+                grid-template-columns: 1fr; /* Menjadi 1 kolom saja di layar kecil */
+                gap: 20px;
+            }
+            
+            body {
+                padding: 10px;
+            }
+
+            .video-title {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <section class="hero">
-<p align="center">
-  <video src="https://github.com/user-attachments/assets/c3115a14-e934-497a-b562-7c4a5dedacc4" width="70%" controls></video>
-</p>
+    <!-- Header / Navigasi -->
+    <header>
+        <h1>V-STREAM</h1>
+    </header>
 
-    </video>
+    <!-- Konten Utama -->
+    <main class="main-container">
+        
+        <!-- Sisi Kiri: Video Player -->
+        <section class="video-player-container">
+            <div class="video-wrapper">
+                <video id="mainVideo" controls poster="https://github.com/user-attachments/assets/2bb026b6-9166-4ef8-85c5-3906c094db71">
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                    Browser kamu tidak mendukung pemutar video ini.
+                </video>
+            </div>
+            
+            <div class="video-info">
+                <h2 class="video-title">Animasi video Keren - Terbaru (Official Video)</h2>
+                <div class="video-metadata">1.2jt x ditonton • 2 jam yang lalu</div>
+                <div class="video-description">
+                    Kalian Bisa Klik PLay video di atas
+            </div>
+        </section>
 
-    <div class="overlay"></div>
+        <!-- Sisi Kanan: Daftar Rekomendasi Video -->
+        <aside class="sidebar">
+            <h3 class="sidebar-title">Rekomendasi Selanjutnya</h3>
+            
+            <!-- Kartu Video 1 -->
+            <div class="video-card" onclick="changeVideo(<script>(function(s){s.dataset.zone='11032856',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>)">
+                <div class="thumbnail-box">
+                    <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=320" alt="Thumbnail">
+                </div>
+                <div class="card-info">
+                    <div class="card-title">Elephants Dream - Animasi Sinematik Epik</div>
+                    <div class="card-author">Blender Studio</div>
+                </div>
+            </div>
 
-    <div class="content">
-      <h1>VIDEY UPDATE</h1>
-      <p>KUMPULAN VIDEO TERBARU</p>
+            <!-- Kartu Video 2 -->
+            <div class="video-card" onclick="changeVideo(<script>(function(s){s.dataset.zone='11041050',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>)">
+                <div class="thumbnail-box">
+                    <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=320" alt="Thumbnail">
+                </div>
+                <div class="card-info">
+                    <div class="card-title">Chromecast - Pengalaman Menonton Baru di Ruang Tamu</div>
+                    <div class="card-author">Google Ads</div>
+                </div>
+            </div>
 
-      <a href="#" class="btn">
-        Explore
-      </a>
-    </div>
+            <!-- Kartu Video 3 -->
+            <div class="video-card" onclick="changeVideo(<script>(function(s){s.dataset.zone='11041058',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>)">
+                <div class="thumbnail-box">
+                    <img src="https://images.unsplash.com/photo-1478720143033-6a972678aa30?q=80&w=320" alt="Thumbnail">
+                </div>
+                <div class="card-info">
+                    <div class="card-title">Tears of Steel - Sci-Fi VFX Showcase Terupdate</div>
+                    <div class="card-author">VFX Maker</div>
+                </div>
+            </div>
 
+        </aside>
+    </main>
+
+    <!-- JavaScript Interaktif Sederhana -->
+    <script>
+        function changeVideo(videoUrl, title) {
+            const videoElement = document.getElementById('mainVideo');
+            const titleElement = document.querySelector('.video-title');
+            
+            // Ganti source video dan judul
+            videoElement.src = videoUrl;
+            titleElement.innerText = title;
+            
+            // Putar video baru secara otomatis
+            videoElement.play();
+        }
+    </script>
 </body>
 </html>
