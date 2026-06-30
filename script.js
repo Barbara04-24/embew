@@ -1,4 +1,4 @@
-<script src="script.js"></script>// Memastikan background berat baru dimuat setelah seluruh dokumen selesai di-render
+</script>// Memastikan background berat baru dimuat setelah seluruh dokumen selesai di-render
 window.addEventListener('DOMContentLoaded', () => {
     // Ganti URL di bawah dengan gambar background aslimu jika ada
     const bgUrl = "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=1600&q=80"; 
