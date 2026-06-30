@@ -1,4 +1,4 @@
-/* RESET & BASE STYLES */
+/* RESET & GAYA DASAR */
 * {
     margin: 0;
     padding: 0;
@@ -7,9 +7,9 @@
 }
 
 body {
-    background-color: #111;
-    color: #fff;
-    overflow-x: hidden;
+    background-color: #0b0b0c; /* Hitam bioskop yang elegan, tidak terlalu pekat */
+    color: #f5f5f7;
+    padding-bottom: 50px;
 }
 
 /* NAVBAR */
@@ -17,213 +17,246 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 6%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
-    position: absolute;
-    width: 100%;
-    z-index: 10;
+    padding: 15px 4%;
+    background-color: #121214;
+    border-bottom: 1px solid #222226;
 }
 
 .logo {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .logo span {
-    color: #e50914; /* Warna merah khas bioskop/streaming */
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 30px;
+    color: #e50914; /* Aksen merah ala platform streaming profesional */
 }
 
 .nav-links a {
-    color: #e5e5e5;
+    color: #aaa;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px;
     transition: color 0.3s;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover {
     color: #fff;
-    font-weight: 600;
 }
 
-.search-box input {
-    padding: 8px 15px;
-    border-radius: 20px;
-    border: 1px solid #444;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    outline: none;
+/* CONTAINER UTAMA LAYOUT */
+.container {
+    display: block; /* Fallback */
+    max-width: 1400px;
+    margin: 30px auto 0 auto;
+    padding: 0 4%;
 }
 
-/* HERO BANNER */
-.hero {
-    height: 85vh;
-    background: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=1600&q=80') no-repeat center center/cover;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 0 6%;
+/* MENGGUNAKAN TABLE UNTUK LAYOUT DUA KOLOM RESPONSIVE TANPA FLEX/GRID YANG BERPOTENSI BUG */
+.main-content {
+    width: 68%;
+    display: inline-block;
+    vertical-align: top;
 }
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+.sidebar {
+    width: 28%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 3.5%;
+}
+
+/* BINGKAI PEMUTAR VIDEO (VIDEO PLAYER) */
+.video-player-container {
     width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(17, 17, 17, 0.9), rgba(17, 17, 17, 0.3)),
-                linear-gradient(to top, #111, transparent);
+    background-color: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    border: 1px solid #222;
 }
 
-.hero-content {
-    position: relative;
-    max-width: 600px;
-    z-index: 2;
+.video-player-container video {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9; /* Menjaga rasio video tetap sempurna */
 }
 
-.badge {
-    background-color: #e50914;
-    padding: 5px 10px;
-    font-size: 12px;
-    font-weight: bold;
+/* DETAIL VIDEO */
+.video-details {
+    margin-top: 20px;
+    background-color: #121214;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #1e1e21;
+}
+
+.category-badge {
+    background-color: rgba(225, 9, 20, 0.15);
+    color: #e50914;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 600;
     border-radius: 4px;
     text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
-.hero-content h1 {
-    font-size: 48px;
-    margin: 15px 0 10px 0;
-    line-height: 1.2;
-}
-
-.meta {
-    color: #aaa;
-    font-size: 14px;
-    margin-bottom: 15px;
-}
-
-.description {
-    font-size: 16px;
-    color: #e5e5e5;
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
-
-.buttons {
-    display: flex;
-    gap: 15px;
-}
-
-.btn {
-    padding: 12px 25px;
-    font-size: 16px;
+.video-title {
+    font-size: 22px;
     font-weight: 600;
-    border: none;
-    border-radius: 5px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.video-meta {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+/* TOMBOL INTERAKSI */
+.video-actions {
+    margin-bottom: 20px;
+}
+
+.action-btn {
+    background-color: #1f1f23;
+    color: #fff;
+    border: 1px solid #2d2d33;
+    padding: 8px 16px;
+    font-size: 13px;
+    border-radius: 20px;
     cursor: pointer;
-    transition: transform 0.2s, background 0.3s;
+    margin-right: 10px;
+    transition: all 0.2s ease;
 }
 
-.btn:hover {
-    transform: scale(1.05);
+.action-btn:hover {
+    background-color: #2d2d33;
+    border-color: #444;
 }
 
-.btn-play {
-    background-color: #fff;
-    color: #000;
+.save-btn {
+    background-color: #e50914;
+    border: none;
 }
 
-.btn-info {
-    background-color: rgba(109, 109, 110, 0.7);
+.save-btn:hover {
+    background-color: #ff1e27;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #222226;
+    margin: 20px 0;
+}
+
+.video-description h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
     color: #fff;
 }
 
-/* MOVIES GRID */
-.movies-section {
-    padding: 40px 6%;
+.video-description p {
+    font-size: 14px;
+    color: #aaa;
+    line-height: 1.6;
 }
 
-.movies-section h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
+/* SIDEBAR REKOMENDASI VIDEO */
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
     font-weight: 600;
 }
 
-.movies-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
+.recommendation-list {
+    display: block;
 }
 
-.movie-card {
-    background: #181818;
+.rec-card {
+    background-color: #121214;
+    border: 1px solid #1e1e21;
     border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+    padding: 10px;
+    margin-bottom: 15px;
     cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
 }
 
-.movie-card:hover {
-    transform: translateY(-10px);
+.rec-card:hover {
+    transform: translateY(-3px);
+    background-color: #1c1c21;
 }
 
-.card-img {
+/* THUMBNAIL REKOMENDASI */
+.thumbnail {
+    width: 40%;
+    display: inline-block;
     position: relative;
-    height: 300px;
-}
-
-.card-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.rating {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 5px 8px;
-    border-radius: 5px;
-    font-size: 12px;
-    font-weight: bold;
-    color: #ffbd00;
-}
-
-.movie-info {
-    padding: 15px;
-}
-
-.movie-info h3 {
-    font-size: 16px;
-    margin-bottom: 5px;
-    white-space: nowrap;
+    border-radius: 6px;
     overflow: hidden;
-    text-overflow: ellipsis;
+    vertical-align: middle;
 }
 
-.movie-info p {
+.thumbnail img {
+    width: 100%;
+    height: 75px;
+    object-fit: cover;
+    display: block;
+}
+
+.duration {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    background-color: rgba(0,0,0,0.8);
+    color: #fff;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.rec-info {
+    width: 56%;
+    display: inline-block;
+    margin-left: 3%;
+    vertical-align: middle;
+}
+
+.rec-info h4 {
     font-size: 13px;
-    color: #777;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #fff;
+    margin-bottom: 4px;
+    /* Efek teks potong jika judul terlalu panjang */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
+.rec-info p {
+    font-size: 11px;
+    color: #888;
+}
+
+.rec-info span {
+    font-size: 11px;
+    color: #666;
+}
+
+/* RESPONSIVE DESIGN (TAMPILAN HP) */
+@media (max-width: 900px) {
+    .main-content, .sidebar {
+        width: 100%;
+        display: block;
+        margin-left: 0;
     }
-    .hero-content h1 {
-        font-size: 32px;
-    }
-    .hero {
-        height: 70vh;
+    .sidebar {
+        margin-top: 40px;
     }
 }
