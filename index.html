@@ -1,56 +1,95 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>kumpulan video</title>
-
-  <!DOCTYPE html>
-<html lang="id">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIDEY</title>
-    <style>
-        /* Mengatur latar belakang halaman */
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #121212; /* Warna gelap agar fokus ke video */
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        /* Kontainer Utama Video (Ukuran disesuaikan dengan layar HP) */
-        .video-wrapper {
-            width: 100%;
-            max-width: 450px; /* Batas maksimal lebar agar proporsional */
-            background-color: #000;
-            border-radius: 12px; /* Membuat sudut video sedikit melengkung rapi */
-            overflow: hidden;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
-        }
-
-        /* Mengatur Video HTML5 agar Responsif */
-        .video-wrapper video {
-            width: 100%;
-            display: block;
-            object-fit: contain; /* Menjaga rasio video asli */
-        }
-    </style>
+    <title>CineVerse Player - Menonton Video</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="video-wrapper">
-    <video controls poster="link-gambar-cover.jpg">
-        <source src="https://github.com/user-attachments/assets/e5f4758b-004a-4d80-a1bd-73943a654eed" type="video/mp4">
-        Browser Anda tidak mendukung pemutar video ini.
-    </video>
-</div>
+    <header class="navbar">
+        <div class="logo">Cine<span>Verse</span></div>
+        <div class="nav-links">
+            <a href="#">◀ Kembali ke Beranda</a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="main-content">
+            <div class="video-player-container">
+                <video controls poster="https://github.com/user-attachments/assets/e5f4758b-004a-4d80-a1bd-73943a654eed">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung tag video.
+                </video>
+            </div>
+
+            <div class="video-details">
+                <span class="category-badge">Kumpulan Video #1</span>
+                <h1 class="video-title">Petualangan Alam Liar: Keindahan yang Tersembunyi</h1>
+                <p class="video-meta">Ditonton 1,250 kali • 30 Juni 2026</p>
+                
+                <div class="video-actions">
+                    <button class="action-btn">👍 342 Suka</button>
+                    <button class="action-btn">👎 Tidak Suka</button>
+                    <button class="action-btn">🔗 Bagikan</button>
+                    <button class="action-btn save-btn">➕ Simpan ke Playlist</button>
+                </div>
+
+                <hr class="divider">
+
+                <div class="video-description">
+                    <h3>Deskripsi Video</h3>
+                    <p>Selamat datang di kumpulan video sinematik kami. Video ini menampilkan cuplikan pemandangan alam dengan kualitas tinggi yang dirancang untuk memberikan pengalaman menonton yang rileks dan imersif. Jangan lupa untuk menyukai, berkomentar, dan berlangganan untuk memperbarui video menarik lainnya!</p>
+                </div>
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <h2>VIDEY</h2>
+            
+            <div class="recommendation-list">
+                <div class="rec-card">
+                    <div class="thumbnail">
+                        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=300&q=80" alt="Thumbnail">
+                        <span class="duration">4:37</span>
+                    </div>
+                    <div class="rec-info">
+                        <h4>Cyberpunk City Lights - Efek Visual</h4>
+                        <p>CineVerse Tech</p>
+                        <span>12rb ditonton</span>
+                    </div>
+                </div>
+
+                <div class="rec-card">
+                    <div class="thumbnail">
+                        <img src="https://images.unsplash.com/photo-1509281373149-e957c6296406?w=300&q=80" alt="Thumbnail">
+                        <span class="duration">10:15</span>
+                    </div>
+                    <div class="rec-info">
+                        <h4>Misteri Lampu Neon di Tengah Kota</h4>
+                        <p>Studio Alur</p>
+                        <span>5.4rb ditonton</span>
+                    </div>
+                </div>
+
+                <div class="rec-card">
+                    <div class="thumbnail">
+                        <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=300&q=80" alt="Thumbnail">
+                        <span class="duration">8:22</span>
+                    </div>
+                    <div class="rec-info">
+                        <h4>Kompilasi Sinema Klasik Terbaik Tahun Ini</h4>
+                        <p>Arsip Sinema</p>
+                        <span>25rb ditonton</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    </main>
 
 </body>
 </html>
